@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Video Info</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline';"
+    />
+  </head>
+  <body>
+    <h1>Video Info</h1>
+    <form>
+      <label>Select a video file</label>
+      <input type="file" accept="video/*" />
+      <button type="submit">Get duration</button>
+    </form>
+    <p>Video duration: <span id="duration"></span></p>
+    <script>
+      window.api.receive("video:duration", (data) => {
+        document.querySelector("#duration").innerHTML = `${data} seconds`;
+      });
+
+      document.querySelector("form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        window.api.send(
+          "video:info",
+          document.querySelector("input").files[0].path
+        );
+      });
+    </script>
+  </body>
+</html>
