@@ -1,0 +1,19 @@
+<head> </head>
+<body>
+  <h1>My To-do's</h1>
+  <ul></ul>
+  <script>
+    const list = document.querySelector("ul");
+    window.api.receive("todo:addTask", (task) => {
+      console.log("recieved");
+      const li = document.createElement("li");
+      const text = document.createTextNode(task);
+      li.appendChild(text);
+      list.appendChild(li);
+    });
+
+    window.api.receive("todo:clear", () => {
+      list.innerHTML = "";
+    });
+  </script>
+</body>
