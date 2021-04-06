@@ -1,6 +1,6 @@
 # Learning-Electron
 
-My progress with learning Electron
+My progress with learning Electron.
 
 ## Video Info
 
@@ -8,4 +8,8 @@ This is an electron app which gives back the video duration of a video. Intended
 
 ## To-do App
 
-This app is a simple to-do app.
+This app is a simple to-do app. Intened for me to explore how to use multiple windows and have them communicate with each other, as well as explore how to make custom menus for each window.
+
+## Tasky App
+
+This app is a simple timer app which only loads on the task bar. Intended for me to explore how Electron works with the Tray, as well as IPC between React and Electron.
