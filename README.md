@@ -13,3 +13,7 @@ This app is a simple to-do app. Intened for me to explore how to use multiple wi
 ## Tasky App
 
 This app is a simple timer app which only loads on the task bar. Intended for me to explore how Electron works with the Tray, as well as IPC between React and Electron.
+
+## Video Converter App
+
+This app is used to convert video files from one form to another. Intedned for me to explore how Electron works with React and Redux.
